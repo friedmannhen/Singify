@@ -1,0 +1,80 @@
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.line {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 90%;
+  background: linear-gradient(135deg, #f3a5a5, #528fff);
+}
+.card {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  background: linear-gradient(135deg, #ffd9cf, #6d9df7);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.76);
+  display: flex;
+  gap: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // color: white;
+  // text-transform: uppercase;
+  // text-align: center;
+}
+
+.word {
+  white-space: nowrap;
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  color: rgb(26, 26, 26);
+  transition: opacity 0.3s ease, transform 0.3s ease; 
+  letter-spacing: 2px;
+font-family: 'roboto','Courier New', Courier, monospace;
+}
+
+.word1 {
+  writing-mode: vertical-rl;
+}
+
+.word2 {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.word.hidden {
+  opacity: 0;
+  transform: scale(0.8), rotate(180deg); /* Optional: add a slight scale effect */
+}
+button {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 75px);
+  opacity: 0.3;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+  background-color: #d0d0d0;
+  transform: translateY(0); /* Reset on click */
+}
