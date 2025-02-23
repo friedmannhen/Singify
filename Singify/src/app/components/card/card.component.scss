@@ -10,7 +10,12 @@
   left: 50%;
   width: 2px;
   height: 90%;
-  background: linear-gradient(135deg, #f3a5a5, #528fff);
+  background: linear-gradient(
+    135deg,
+    #f3a5a5 0%,        /* Solid pinkish at start */
+    rgba(243, 165, 165, 0.05) 50%,  /* Nearly transparent in middle */
+    #528fff 100%       /* Solid blue at end */
+  );;
 }
 .card {
   position: relative;
@@ -33,11 +38,12 @@
   white-space: nowrap;
   text-align: center;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 70px;
   color: rgb(26, 26, 26);
   transition: opacity 0.3s ease, transform 0.3s ease; 
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 font-family: 'roboto','Courier New', Courier, monospace;
+
 }
 
 .word1 {
@@ -49,9 +55,15 @@ font-family: 'roboto','Courier New', Courier, monospace;
   transform: rotate(180deg);
 }
 
-.word.hidden {
+.word.hidden.word1 {
   opacity: 0;
-  transform: scale(0.8), rotate(180deg); /* Optional: add a slight scale effect */
+    transform:   scale(0.8) 
+  
+}
+.word.hidden.word2 {
+  opacity: 0;
+    transform:   scale(0.8)  rotate(180deg) ;
+  
 }
 button {
   position: absolute;
@@ -77,4 +89,8 @@ button:hover {
 button:active {
   background-color: #d0d0d0;
   transform: translateY(0); /* Reset on click */
+}
+
+.countdown{
+position: absolute;
 }

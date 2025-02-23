@@ -1,6 +1,9 @@
 <div class="card-container" (click)="changeWord()">
     <div class="card">
         <div class="line"></div>
+        <div class="countdown">
+            <app-countdown></app-countdown>
+        </div>
         <div class="word word1" [class.hidden]="word1Hidden">
             <span>{{ word.word }}<span *ngIf="showTranslation"> / {{ word.translation }}</span></span>
         </div>

@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { WordsService } from '../../services/words.service';
 import { word } from '../../models/word.interface';
 import { CommonModule } from '@angular/common';
+import { TimerComponent } from "../countdown/countdown.component";
 @Component({
   selector: 'app-card',
-  imports: [CommonModule],
+  imports: [CommonModule, TimerComponent],
   standalone: true,
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',

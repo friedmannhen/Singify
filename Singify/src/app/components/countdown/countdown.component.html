@@ -1,0 +1,11 @@
+<div #timerElement class="timer" (click)="resetTimer($event)">
+    <svg>
+        <circle cx="50%" cy="50%" r="30"
+            [ngStyle]="{'stroke': timeLeft < 16 ? 'red' : (timeLeft/totaltimer < 0.5 ? 'orange' : '')}" />
+        <circle cx="50%" cy="50%" r="30" pathLength="1"
+            [ngStyle]="{'stroke': timeLeft < 16 ? 'red' : (timeLeft/totaltimer < 0.5 ? 'orange' : '')}" />
+        <text x="100" y="110" text-anchor="middle">
+            <tspan>{{ timeLeft }}</tspan>
+        </text>
+    </svg>
+</div>
