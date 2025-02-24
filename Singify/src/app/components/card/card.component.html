@@ -4,11 +4,11 @@
         <div class="countdown">
             <app-countdown></app-countdown>
         </div>
-        <div class="word word1" [class.hidden]="word1Hidden">
-            <span>{{ word.word }}<span *ngIf="showTranslation"> / {{ word.translation }}</span></span>
+        <div class="word word1" [class.hidden]="word1Hidden" >
+            <span class="no-select" (click)="preventDefaults($event)">{{ word.word }}<span *ngIf="showTranslation"> / {{ word.translation }}</span></span>
         </div>
         <div class="word word2" [class.hidden]="word2Hidden">
-            <span>{{ word.word }}<span *ngIf="showTranslation"> / {{ word.translation }}</span></span>
+            <span class="no-select" (click)="preventDefaults($event)">{{ word.word }}<span *ngIf="showTranslation"> / {{ word.translation }}</span></span>
         </div>
 
         <button class="btn" (click)="toggleTranslation($event)">

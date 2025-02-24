@@ -35,4 +35,8 @@ export class CardComponent {
     event.stopPropagation(); // Prevent event bubbling
     this.showTranslation = !this.showTranslation;
   }
+
+  preventDefaults(event: Event) {
+    event.preventDefault(); 
+  }
 }
